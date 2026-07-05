@@ -22,9 +22,6 @@ import crud
 import scoring
 from database import engine, get_db, Base
 
-# Create tables on startup if they don't exist yet.
-Base.metadata.create_all(bind=engine)
-
 app = FastAPI(
     title="Serial Killer Information API",
     description=(
