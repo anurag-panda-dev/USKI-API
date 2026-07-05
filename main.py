@@ -75,7 +75,7 @@ def create_killer(payload: schemas.KillerCreate, db: Session = Depends(get_db)):
 @app.get("/killers", response_model=List[schemas.KillerOut], tags=["Killers"])
 def list_killers(
     skip: int = 0,
-    limit: int = Query(100, ge=1, le=1000),
+    limit: int = Query(652, ge=1, le=1000),
     country: Optional[str] = Query(None, description="Filter by country (partial match)"),
     name: Optional[str] = Query(None, description="Filter by name (partial match)"),
     min_score: Optional[float] = Query(None, ge=0, le=100, description="Minimum psycho_killer_score"),
